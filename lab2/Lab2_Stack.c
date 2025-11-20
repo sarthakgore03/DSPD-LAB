@@ -101,22 +101,22 @@ void checkPalindrome() {
     printf("Enter a string to check palindrome: ");
     scanf("%s", str);
 
-    // Manually calculate string length
+    
     while (str[len] != '\0')
         len++;
 
-    top = -1; // reset stack
+    top = -1; 
 
-    // Push each character of string into stack
+    
     for (i = 0; i < len; i++)
         push(str[i]);
 
-    // Pop characters to form reversed string
+    
     for (i = 0; i < len; i++)
         rev[i] = pop();
     rev[i] = '\0';
 
-    // Manual comparison of original and reversed string
+    
     for (i = 0; i < len; i++) {
         if (str[i] != rev[i]) {
             isPalindrome = 0;
@@ -140,3 +140,4 @@ void checkUnderflow() {
     printf("Trying to pop element from empty stack...\n");
     pop();
 }
+
